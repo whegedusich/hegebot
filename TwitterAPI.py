@@ -16,7 +16,7 @@ def send_tweet(tweet):
 
 
 def get_tweets(u):
-    return api.GetUserTimeline(screen_name=u, count=10, exclude_replies=False)
+    return api.GetUserTimeline(screen_name=u, count=10, exclude_replies=False, include_rts=False)
 
 
 def get_friends(u):

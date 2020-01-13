@@ -24,32 +24,23 @@ samples = ['@BarackObama',
 tweet_dict = {}
 
 
-def get_links(tweet):
-    links = []
-    urls = tweet.urls
-    media_urls = tweet.media
-    for url in urls:
-        links.append(url.url)
-    if media_urls is not None:
-        for mu in media_urls:
-            links.append(mu.url)
-    return links
-
-
 def get_clean_tweets(user):
-    timeline = TwitterAPI.get_tweets(user)
     clean_tweets = []
+    timeline = TwitterAPI.get_tweets(user)
     for tweet in timeline:
-        links = get_links(tweet)
-        if len(links) > 0:
-            for link in links:
-                clean_tweets.append(tweet.full_text.replace(link, ''))
+        print(tweet.full_text)
+        clean_tweet = re.sub(r':?\shttps://t.co/[a-zA-Z1-9./_\-]+\b', '', tweet.full_text)
+        clean_tweet = clean_tweet.replace('\n', '')
+        if len(clean_tweet) > 0:
+            clean_tweets.append(clean_tweet)
         else:
-            clean_tweets.append(tweet.full_text)
+            pass
 
     return clean_tweets
 
 
 if __name__ == "__main__":
-    for sample in samples:
-        tweet_dict[sample] = get_clean_tweets(sample)
+    test = get_clean_tweets('@BarackObama')
+
+    # for sample in samples:
+    #     tweet_dict[sample] = get_clean_tweets(sample)

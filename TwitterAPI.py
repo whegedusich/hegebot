@@ -19,5 +19,13 @@ def get_tweets(u):
     return api.GetUserTimeline(screen_name=u, count=10, exclude_replies=False, include_rts=False)
 
 
+def get_mentions():
+    return api.GetMentions(trim_user=True, contributor_details=True)
+
+
 def get_friends(u):
     return api.GetFriends(screen_name=u)
+
+
+def get_followers(u):
+    return api.GetFollowers(screen_name=u), api.GetFollowerIDs(screen_name=u)

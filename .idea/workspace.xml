@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="aa68d5c0-bdcb-4bab-ae06-23985cf423ec" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TwitterAPI.py" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterAPI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TwitterHQ.py" beforeDir="false" afterPath="$PROJECT_DIR$/TwitterHQ.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,12 +126,28 @@
       <option name="project" value="LOCAL" />
       <updated>1578813825115</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added some more API functions">
+      <created>1578972841073</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578972841073</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated README.md">
+      <created>1578972968255</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578972968255</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initialized a lot of functions. Main change was to clean tweets of links for the Markov model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initialized a lot of functions. Main change was to clean tweets of links for the Markov model" />
+    <MESSAGE value="Added some more API functions" />
+    <MESSAGE value="Updated README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="425" y="9" key="CommitChangelistDialog2" timestamp="1578972967414">

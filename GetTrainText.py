@@ -1,5 +1,6 @@
 import TwitterAPI
 import re
+from datetime import datetime
 
 samples = ['@BarackObama',
            '@katyperry',
@@ -21,16 +22,13 @@ samples = ['@BarackObama',
            '@shakira',
            '@narendramodi',
            '@jimmyfallon']
-tweet_dict = {}
 
 
-def get_clean_tweets(user):
+def get_clean_tweets(tmln):
     clean_tweets = []
-    timeline = TwitterAPI.get_tweets(user)
-    for tweet in timeline:
-        print(tweet.full_text)
-        clean_tweet = re.sub(r':?\shttps://t.co/[a-zA-Z1-9./_\-]+\b', '', tweet.full_text)
-        clean_tweet = clean_tweet.replace('\n', '')
+    for tweet in tmln:
+        clean_tweet = re.sub(r'https://t.co/[a-zA-Z0-9./_\-]+', '', tweet.full_text)
+        clean_tweet = clean_tweet.replace('\n', ' ')
         if len(clean_tweet) > 0:
             clean_tweets.append(clean_tweet)
         else:
@@ -40,7 +38,10 @@ def get_clean_tweets(user):
 
 
 if __name__ == "__main__":
-    test = get_clean_tweets('@BarackObama')
-
-    # for sample in samples:
-    #     tweet_dict[sample] = get_clean_tweets(sample)
+    today = datetime.strftime(datetime.today(), '%a %b %d')
+    timeline = TwitterAPI.get_tweets('@realDonaldTrump', today)
+    tweets = get_clean_tweets(timeline)
+    str_tweets = ' '.join(tweets)
+    # TODO find out how to address emoji
+    # with open('C:/Users/whege/Documents/hegebot/text.txt', 'a') as file:
+    #     file.write(str_tweets)

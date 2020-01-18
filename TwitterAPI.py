@@ -7,7 +7,8 @@ api = twitter.Api(consumer_key='A6qAY3a2FxtUHV1CGtHSv6GQy',
                   consumer_secret='6KKGPoD9t6hjrEFMSSFyHR0r2zR1qNqFQOM3YVkV956MbvNO2b',
                   access_token_key='1216199305326927877-6v39cFBjoee8ewssdEAE1EUu9ksRCp',
                   access_token_secret='qaLv8Fqp22mam5RcgPSWA1BxHys5FA2CZc33IopNW58JC',
-                  tweet_mode='extended')
+                  tweet_mode='extended',
+                  input_encoding='ascii')
 
 
 def send_tweet(tweet):
@@ -15,8 +16,10 @@ def send_tweet(tweet):
     print(f"Sending tweet: '{tweet.text}'")
 
 
-def get_tweets(u):
-    return api.GetUserTimeline(screen_name=u, count=10, exclude_replies=False, include_rts=False)
+def get_tweets(u, d):
+    timeline = api.GetUserTimeline(screen_name=u, count=50, exclude_replies=False, include_rts=False)
+    today_tweets = [tweet for tweet in timeline if (d in tweet.created_at and tweet.lang == 'en')]
+    return today_tweets
 
 
 def get_mentions():

@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa68d5c0-bdcb-4bab-ae06-23985cf423ec" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/hegebot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hegebot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GetTrainText.py" beforeDir="false" afterPath="$PROJECT_DIR$/GetTrainText.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MarkovTweets.py" beforeDir="false" afterPath="$PROJECT_DIR$/RNNTweets.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text.txt" beforeDir="false" afterPath="$PROJECT_DIR$/text.txt" afterDir="false" />
-    </list>
+    <list default="true" id="aa68d5c0-bdcb-4bab-ae06-23985cf423ec" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -182,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579326439928</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Updated tweet fetch to get day's tweets.&#10;Added batch file to run script at the end of ea day.">
+      <created>1595486783930</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595486783930</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -195,6 +195,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Updated tweet fetch to get day's tweets.&#10;Added batch file to run script at the end of ea day." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="500" y="80" width="916" height="939" key="CommitChangelistDialog2" timestamp="1595486783850">
+      <screen x="0" y="25" width="1920" height="1055" />
+    </state>
+    <state x="500" y="80" width="916" height="939" key="CommitChangelistDialog2/0.25.1920.1055@0.25.1920.1055" timestamp="1595486783850" />
     <state x="452" y="177" width="1016" height="744" key="SettingsEditor" timestamp="1595478432361">
       <screen x="0" y="25" width="1920" height="1055" />
     </state>
